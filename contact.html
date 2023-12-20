@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .owner-details {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .owner {
+            width: 50%;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            margin-left:5px;
+            text-align: center;
+        }
+
+        .owner h2 {
+            color: #333;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Back button style */
+        button:last-child {
+            margin-top: 10px;
+            background-color: #333;
+        }
+
+        button:last-child:hover {
+            background-color: #1f1f1f;
+        }
+        .owner img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            
+        }
+    </style>
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <div class="owner-details">
+            <div class="owner">
+                <img src="Nava.jpg" alt="John Doe">
+                <h2>Navaneeth GA</h2>
+                <p><strong>Founder and CEO</strong></p>
+                <p>
+                    Navaneeth is the visionary leader behind DriveMaster Academy. With a passion for road safety
+                    and driver education, he founded the academy to create a positive impact on the community.
+                </p>
+            </div>
+        
+            <div class="owner">
+                <img src="Mithun.jpg" alt="Jane Smith">
+                <h2>Mithun Sankar S</h2>
+                <p><strong>Co-founder and Head Instructor</strong> </p>
+                <p>
+                    Mithun Sankar brings a wealth of experience as the Head Instructor at DriveMaster Academy. His
+                    dedication to teaching safe driving practices has made a significant contribution to the
+                    success of our students.
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="contact-info">
+            <p><strong>Email:</strong> info@drivemasteracademy.com</p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+        </div>
+
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            // Perform form submission logic here
+            alert("Message sent successfully!");
+            // You can redirect to another page or perform further actions after successful submission
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

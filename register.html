@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #d9acac;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 100px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        small {
+            display: block;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <title>Registration Form</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form id="registrationForm" onsubmit="submitForm(event)">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+            <small>Enter a 10-digit phone number</small>
+
+            <label for="courseType">Type of Course:</label>
+            <select id="courseType" name="courseType" required>
+                <option value="basic">Basic Driving Course</option>
+                <option value="advanced">Advanced Driving Course</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="timing">Timing:</label>
+            <input type="text" id="timing" name="timing" required>
+
+            <label for="joinDate">Date of Joining:</label>
+            <input type="date" id="joinDate" name="joinDate" required>
+
+            <label for="licenseType">With License:</label>
+            <input type="radio" id="withLicense" name="licenseType" value="withLicense" required>
+            <label for="withLicense">Without License </label>
+            <input type="radio" id="withoutLicense" name="licenseType" value="withoutLicense" required>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            // Perform form submission logic here
+            alert("Registration successful!");
+            // You can redirect to another page or perform further actions after successful registration
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>        
+    </form>
+    </div>
+
+
+</body>
+</html>
