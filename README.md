@@ -48,17 +48,31 @@ DriveMaster is a modern cloud-powered driving school management platform designe
 
 ## 🚀 How to Run
 
-### 1. **Clone the repository:**
-```bash
-git clone https://github.com/rog-mithun/DriveMaster.git
-cd DriveMaster
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rog-mithun/DriveMaster.git
+   cd DriveMaster
 
-### 2. **Run with Docker:**
-```bash
-docker build -t drivemaster .
-docker run -p 8080:80 drivemaster
+2. **Run with Docker:**
+   ```bash
+   docker build -t drivemaster .
+   docker run -p 8080:80 drivemaster
 - Then visit: http://localhost:8080 in your browser.
 
 ---
 
-##
+## 🧠 Conceptual Architecture
+
+DriveMaster is designed with future-proof cloud-native principles:
+
+- Kubernetes-ready design with modular pages
+
+- Scalable microservice approach (planned for backend)
+
+- Resilient and efficient for driving school ecosystems
+
+---
+
+📖 License
+
+This project is licensed under the [MIT License](LICENSE) © 2023 Mithunsankar S.
